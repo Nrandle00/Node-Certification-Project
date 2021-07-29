@@ -64,7 +64,7 @@ Router.patch('/products/:id', async (req, res) =>{
         const { params, body } = req;
         const { id } = params;
         const doc = await ProductModel.findByIdAndUpdate(id, body)
-        res.jsin({
+        res.json({
             status: "success",
             message: "Product updated successfully"
         })
