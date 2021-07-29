@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row centered-form">
+        <div class="col-md-6">
+            <h3>Welcome to Shop 24x7</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Proin vulputate et eros non eleifend. 
+                Etiam ut aliquet justo, et cursus diam. 
+                Etiam mattis finibus felis ac varius. 
+                In ac vehicula urna, a suscipit est. 
+                Integer eget elit luctus, cursus orci et, bibendum nunc.
+                Praesent volutpat pulvinar volutpat.
+                Vestibulum in risus consectetur, fermentum leo non, convallis erat. 
+                Aenean eget dolor condimentum, dictum est at, ornare ante. 
+                Curabitur dignissim est at felis porttitor, sed luctus nunc pharetra. 
+                Sed vel ante ornare, ullamcorper dui ac, maximus libero. 
+                Phasellus augue velit, pellentesque id ornare nec, feugiat quis ante. 
+                Sed ex ex, vulputate id pretium at, maximus non elit. 
+                Phasellus vehicula ultrices purus et suscipit. 
+                Suspendisse egestas dui ut ligula suscipit faucibus.</p>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Login</h3>
+                </div>
+                <div class="panel-body">
+                    <form role="form" #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+                        <div class="form-group col-lg-10">
+                                <label for="inputEmail">Email</label>
+                                <input type='text' name="email" class="form-control" id="inputEmail" #email="ngModel" [(ngModel)]="loginModel.email"/>
+                        </div>
+                        <div class="form-group col-lg-10">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" name="password" class="form-control" id="inputPassword" #password="ngModel" [(ngModel)]="loginModel.password"/>
+                        </div>
+                        <div class="form-group col-lg-10">
+                            <!-- <div class="col-xs-6">
+                                <a routerLink="/forgotpassword">Forgot Your Password?</a>
+                            </div> -->
+                            <div class="form-group col-lg-6">
+                                <input type="submit" class="form-control" value="Login" class="btn btn-info btn-block">
+                            </div>
+                            <div class="form-group col-lg-6">
+                                <h4><a routerLink="/register">Register</a></h4>
+                            </div>
+                        </div>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+.guidebtn {
+    width: 40px;
+    box-shadow: 3px 3px 3px black;
+    background-color: grey;
+}
+
+
+.container .btn {
+    background-color: transparent;
+    position: absolute;
+    transform: translate(-50%, 500%);
+    width: 80px;
+}
+.carousel-item{
+    height:400px;
+}
+.img{
+    height:300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
