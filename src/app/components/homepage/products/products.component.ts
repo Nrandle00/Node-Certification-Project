@@ -24,22 +24,14 @@ export class ProductsComponent implements OnInit {
     
     this.homeDeps.getHomepageProducts().subscribe((response:Iproduct[] ) => {
       this.products = response;
+      this.products.forEach(product => {
+        product.image = "http://localhost:3000" + product.image
+      });
     })
     
     this.homeDeps.getHomePageDepartments().subscribe((response:string[] ) => {
       this.departments = response;
     })    
-  }
-  ngAfterContentChecked():void{
-    if (this.products && !this.productsDone){
-      this.products.forEach(product => {
-        product.image = "http://localhost:3000" + product.image
-      });
-      this.productsDone = true;
-      
-    }
-    
-    
   }
 
 }
