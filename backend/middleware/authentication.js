@@ -3,7 +3,6 @@ const SECRET_KEY = "dscwrcfdvjl4387398msl%$#^%cewncjno(&*^MNjjnjWWELK)098979d4@#
 
 function AuthMiddleware(req, res, next){
     try{
-        console.log("authing lol")
         const { authorization } = req.headers;
         const payload = jwt.verify(authorization, SECRET_KEY);
         if(payload){

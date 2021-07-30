@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 const ProductModel = require("../schema/product");
 
-
 Router.post("/products", multer().any(), async (req, res)=>{
     try{
         console.log(req.files[0], req.body);

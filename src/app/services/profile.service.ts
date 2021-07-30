@@ -9,7 +9,7 @@ export class ProfileService {
   constructor(private http : HttpClient) { }
 
   profileDetails(){
-    return this.http.get("http://localhost:8080/api/v1/users/whoami",{
+    return this.http.get("http://localhost:3000/api/v1/users/whoami",{
       headers : {"Authorization" : window.localStorage.getItem("token") || ""}
     })
   }
