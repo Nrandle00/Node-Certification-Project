@@ -36,6 +36,8 @@ export class CartService {
     const formData = new FormData();
     formData.append("user", this.user);
     formData.append("cart", JSON.stringify(this.cart));
+
+    this.http.post("http://localhost:3000/api/v1/order", formData);
   }
   removeItem<T>(arr: Array<T>, value: T): Array<T> {
     const index = arr.indexOf(value);
