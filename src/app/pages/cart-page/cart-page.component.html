@@ -14,7 +14,7 @@
         <td>{{item.name}} <br> 
           Discount: {{item.discount}} <br>
         {{item.price|currency:'EUR':true}}</td>
-        <button type="button" class="button btn-primary remove-item" (click)="removeItem(i)">Remove Item</button>
+        <button type="button" class="btn btn-danger" (click)="removeItem(i)">Remove Item</button>
         <br>
       </tr>
       <br>

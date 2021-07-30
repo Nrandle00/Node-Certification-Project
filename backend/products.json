@@ -1,0 +1,144 @@
+[{
+  "_id": {
+    "$oid": "610186f64baf9645009ef594"
+  },
+  "name": "Green Book",
+  "department": "Books",
+  "price": 1234,
+  "discount": 21,
+  "image": "\\images\\products\\book1-green.png",
+  "description": "A green book",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187084baf9645009ef596"
+  },
+  "name": "Red Book",
+  "department": "Books",
+  "price": 1244,
+  "discount": 189,
+  "image": "\\images\\products\\book1-red.png",
+  "description": "A redbook",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187264baf9645009ef598"
+  },
+  "name": "Harp",
+  "department": "Instruments",
+  "price": 1235,
+  "discount": 574,
+  "image": "\\images\\products\\instrument-harp.png",
+  "description": "A harp, to play music on",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187384baf9645009ef59a"
+  },
+  "name": "Drum",
+  "department": "Instruments",
+  "price": 1235,
+  "discount": 574,
+  "image": "\\images\\products\\instrument-drum.png",
+  "description": "A drum to beat",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6101874d4baf9645009ef59c"
+  },
+  "name": "Flute",
+  "department": "Instruments",
+  "price": 8457,
+  "discount": 485,
+  "image": "\\images\\products\\instrument-flute.png",
+  "description": "A Flute to blow",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6101875e4baf9645009ef59e"
+  },
+  "name": "Bell",
+  "department": "Instruments",
+  "price": 748,
+  "discount": 48,
+  "image": "\\images\\products\\instrument-bell.png",
+  "description": "A bell to ring",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187864baf9645009ef5a0"
+  },
+  "name": "Leafy Plant",
+  "department": "Plants",
+  "price": 74,
+  "discount": 9,
+  "image": "\\images\\products\\plant4.png",
+  "description": "A leafy boy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187994baf9645009ef5a2"
+  },
+  "name": "Bushy Plant",
+  "department": "Plants",
+  "price": 84,
+  "discount": 9,
+  "image": "\\images\\products\\plant3.png",
+  "description": "A Bushy plant boy",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187b04baf9645009ef5a4"
+  },
+  "name": "Flower",
+  "department": "Plants",
+  "price": 84,
+  "discount": 21,
+  "image": "\\images\\products\\plant2.png",
+  "description": "A beautiful flower",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187ca4baf9645009ef5a6"
+  },
+  "name": "Sprout",
+  "department": "Plants",
+  "price": 21,
+  "discount": 7,
+  "image": "\\images\\products\\plant1.png",
+  "description": "A newly grown plant",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610187f04baf9645009ef5a8"
+  },
+  "name": "shovel",
+  "department": "Tools",
+  "price": 87,
+  "discount": 54,
+  "image": "\\images\\products\\shovel.png",
+  "description": "A shovel to dig",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610188084baf9645009ef5aa"
+  },
+  "name": "Pickaxe",
+  "department": "Tools",
+  "price": 98,
+  "discount": 25,
+  "image": "\\images\\products\\pickaxe.png",
+  "description": "A pickaxe to mine",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "610188194baf9645009ef5ac"
+  },
+  "name": "Hammer",
+  "department": "Tools",
+  "price": 98,
+  "discount": 25,
+  "image": "\\images\\products\\hammer.png",
+  "description": "A hammer to smash",
+  "__v": 0
+}]
