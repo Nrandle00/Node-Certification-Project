@@ -10,31 +10,32 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartPageComponent implements OnInit {
 
   tempCart !: Iproduct[]
+  sum: number = 0
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
     this.tempCart = this.cartService.getCart();
   }
 
-  sum : number = 0
   
-  getSum(){
-  
-      for(let i of this.tempCart){
-        this.sum += i.price
-      }
-      return this.sum
-       
-    }
 
+  getSum() {
+    this.sum = 0
+    for (let i of this.tempCart) {
+      this.sum += i.price
+    }
+    return this.sum
+
+  }
+
+  //button Function
   placeOrder() {
     this.cartService.placeOrder();
   }
-
-  removeItem(i:number){
+  removeItem(i: number) {
     this.cartService.deleteItem(i);
   }
-  emptyCart(){
+  emptyCart() {
     this.cartService.clearCart();
   }
 }
