@@ -13,6 +13,8 @@ var indexRouter = require('./routes/index');
 const AdminRouter = require("./routes/admin");
 const productRouter = require("./routes/products");
 
+const orderRouter = require("./routes/order");
+
 const UserRouter = require("./routes/users");
 const HomepageRouter = require("./routes/homepage");
 
@@ -43,6 +45,7 @@ app.use("/api/v1/products", productRouter);
 
 app.use("/api/v1/users", UserRouter);
 app.use("/api/v1/homepage", HomepageRouter);
+app.use("/api/v1/order", orderRouter);
 
 // app.use("/api/v1/home", HomepageRouter)
 
