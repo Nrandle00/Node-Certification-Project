@@ -16,9 +16,16 @@ export class CartPageComponent implements OnInit {
     this.tempCart = this.cartService.getCart();
   }
 
+  sum : number = 0
+  
   getSum(){
-    return 5
-  }
+  
+      for(let i of this.tempCart){
+        this.sum += i.price
+      }
+      return this.sum
+       
+    }
 
   removeItem(i:number){
     delete this.cartService.cart[i];
