@@ -33,5 +33,9 @@ export class ProductsComponent implements OnInit {
       this.departments = response;
     })
   }
+  addToCart(product: Iproduct){
+    this.cartService.addToCart(product);
+    this.router.navigateByUrl('/cart');
+  }
 
 }
