@@ -3,7 +3,7 @@
     <h2>Products</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
         <div class="col-3 mb-4" *ngFor="let product of products;" (click)="redirect(product)">
-            <div class="card-sl">
+            <div class="card-sl" id="homepage-product" data_testid="homepage-product">
                 <img class="card-image" src={{product.image}} alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-heading">{{product.name | titlecase}} </h5>

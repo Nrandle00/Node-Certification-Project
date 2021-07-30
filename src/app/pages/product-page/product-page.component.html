@@ -13,7 +13,7 @@
             <h1>{{product?.discount | currency}}</h1><h1 style="color:red;"><del>{{product?.price | currency}}</del></h1>
         </div>
         <div class="col">
-            <button  type="button" class="btn btn-primary" (click)=addToCart(product)>Add To Cart</button> 
+            <button id="product-page-add-to-cart" data_testid="product-page-add-to-cart" type="button" class="btn btn-primary" (click)=addToCart(product)>Add To Cart</button> 
         </div>
     </div> 
     <div class="row">
