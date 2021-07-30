@@ -21,7 +21,9 @@ export class ProductsComponent implements OnInit {
   departments !: string[];
 
 
-  constructor(private homeDeps: HomeCategoriesService,private service: ProductsService, private activatedRoute : ActivatedRoute, private router: Router, private cartService: CartService) { }
+  constructor(private homeDeps: HomeCategoriesService, private service: ProductsService, 
+              private activatedRoute : ActivatedRoute, private router: Router, 
+              private cartService: CartService) { }
 
   ngOnInit(): void {
 
@@ -43,5 +45,4 @@ export class ProductsComponent implements OnInit {
   redirect(product : Iproduct){
     this.router.navigateByUrl('/products/'+product._id);
   }
-
 }

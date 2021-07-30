@@ -20,6 +20,7 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { ManageOrdersComponent } from './pages/manage-orders/manage-orders.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AddNewProductComponent } from './pages/add-new-product/add-new-product.component';
+import { CartService } from './services/cart.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { AddNewProductComponent } from './pages/add-new-product/add-new-product.
     BrowserAnimationsModule,
     CarouselModule 
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent],
   exports:[CarouselModule]
 })
