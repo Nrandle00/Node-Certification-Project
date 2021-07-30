@@ -13,10 +13,18 @@ export class CartService {
   constructor(private http: HttpClient) { }
 
   addToCart(product: Iproduct){
-    this.cart.push(product)
+    if (window.localStorage.getItem("cart")){
+      this.cart = JSON.parse(window.localStorage.getItem("cart")||"");
+    }
+    this.cart.push(product);
+    window.localStorage.setItem("cart", JSON.stringify(this.cart))
   }
 
   getCart() : Iproduct[]{
+    if (window.localStorage.getItem("cart")){
+      this.cart = JSON.parse(window.localStorage.getItem("cart")||"");
+    }
+    console.log(this.cart)
     return this.cart;
   }
   //add http post to place order
@@ -27,6 +35,13 @@ export class CartService {
     const formData = new FormData();
     formData.append("user", this.user);
     formData.append("cart", JSON.stringify(this.cart));
+  }
+  deleteItem(i:number){
+    if (window.localStorage.getItem("cart")){
+      this.cart = JSON.parse(window.localStorage.getItem("cart")||"");
+    }
+    delete this.cart[i];
+    window.localStorage.setItem("cart", JSON.stringify(this.cart))
   }
 }
 

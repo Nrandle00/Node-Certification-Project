@@ -32,8 +32,7 @@ export class CartPageComponent implements OnInit {
   }
 
   removeItem(i:number){
-    delete this.cartService.cart[i];
-    window.location.reload();
+    this.cartService.deleteItem(i);
   }
 
 }
