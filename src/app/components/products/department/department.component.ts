@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Iproduct } from 'src/app/interfaces/iproduct';
+import { CartService } from 'src/app/services/cart.service';
 import { HomeCategoriesService } from 'src/app/services/home-categories.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class DepartmentComponent implements OnInit {
   url: string = this.router.url;
   selectedOption !: string;
 
-  constructor(private homeDeps: HomeCategoriesService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private homeDeps: HomeCategoriesService, private route: ActivatedRoute, private router: Router,private cartService: CartService) { }
 
   ngOnInit(): void {
 
@@ -59,10 +60,15 @@ export class DepartmentComponent implements OnInit {
     } else if (this.filtered) {
       this.router.navigateByUrl("department/" + this.department + "/" + this.selectedOption).then(() => {window.location.reload()});
     } else {
-      this.router.navigateByUrl(this.url.concat("/" + this.selectedOption)).then(() => {window.location.reload()});
-      
+      this.router.navigateByUrl(this.url.concat("/" + this.selectedOption)).then(() => {window.location.reload()}); 
     }
-
+  }
+  addToCart(product: Iproduct){
+    this.cartService.addToCart(product);
+    this.router.navigateByUrl('/cart');
+  }
+  redirect(product : Iproduct){
+    this.router.navigateByUrl('/products/'+product._id);
   }
 
 }

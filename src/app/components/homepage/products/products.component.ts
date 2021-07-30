@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Iproduct } from 'src/app/interfaces/iproduct';
+import { ProductsService } from 'src/app/services/admin/product.service';
+import { CartService } from 'src/app/services/cart.service';
 import { HomeCategoriesService } from 'src/app/services/home-categories.service';
 
 @Component({
@@ -18,7 +21,7 @@ export class ProductsComponent implements OnInit {
   departments !: string[];
 
 
-  constructor(private homeDeps: HomeCategoriesService) { }
+  constructor(private homeDeps: HomeCategoriesService,private service: ProductsService, private activatedRoute : ActivatedRoute, private router: Router, private cartService: CartService) { }
 
   ngOnInit(): void {
 
@@ -36,6 +39,9 @@ export class ProductsComponent implements OnInit {
   addToCart(product: Iproduct){
     this.cartService.addToCart(product);
     this.router.navigateByUrl('/cart');
+  }
+  redirect(product : Iproduct){
+    this.router.navigateByUrl('/products/'+product._id);
   }
 
 }

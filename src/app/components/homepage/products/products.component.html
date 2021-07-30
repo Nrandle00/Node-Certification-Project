@@ -2,7 +2,7 @@
 
     <h2>Products</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-        <div class="col-3 mb-4" *ngFor="let product of products;">
+        <div class="col-3 mb-4" *ngFor="let product of products;" (click)="redirect(product)">
             <div class="card-sl">
                 <img class="card-image" src={{product.image}} alt="Card image cap">
                 <div class="card-body">
@@ -10,7 +10,7 @@
                     <p class="card-text">{{product.price | currency :'EUR':true}} </p>
 
                 </div>
-                <a href="#" class="card-button">add to cart</a>
+                <a class="card-button" (click)="addToCart(product)">add to cart</a>
             </div>
         </div>
     </div>
