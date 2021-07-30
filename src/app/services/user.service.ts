@@ -9,7 +9,7 @@ export class UserService {
 
   isLoggeedIn= false;
   user = {
-    name : "abc",
+    name : "",
     isAdmin : true
 }
   constructor(private http: HttpClient, private router: Router) { }
