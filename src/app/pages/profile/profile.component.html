@@ -19,16 +19,19 @@
                 <h4>User Info</h4>
             </div>
             <div class="row">
-                <label data_testid="profile-first-name" for="inputFirstName" class="col-form-label">Firstname</label><br>
-                <b>{{profile.firstname}}</b>
+                <label data_testid="profile-first-name" for="inputFirstName" class="col-form-label"><b>First Name</b></label><br>
+                <p>{{profile.firstname}}</p>
+                <hr>
             </div>
             <div class="row">
-                <label data_testid="profile-last-name" for="inputLastName" class="col-form-label">Lastname</label><br>
-                <b>{{profile.lastname}}</b>
+                <label data_testid="profile-last-name" for="inputLastName" class="col-form-label"><b>Last Name</b></label><br>
+                <p>{{profile.lastname}}</p>
+                <hr>
             </div>
             <div class="row>">
-                <label data_testid="profile-email-name" for="inputEmail" class="col-form-label">Email</label><br>
-                <b>{{profile.email}}</b>
+                <label data_testid="profile-email-name" for="inputEmail" class="col-form-label"><b>Email</b></label><br>
+                <p>{{profile.email}}</p>
+                <hr>
             </div>
         </div>
         <div class="col">
@@ -36,20 +39,22 @@
                 <h4>Address</h4>
             </div>
             <div class="row">
-                <label for="inputEmail" class="col-form-label">Street Address</label><br>
-                <b>{{profile.streetaddress}}</b>
+                <label for="inputEmail" class="col-form-label"><b>Street Address</b></label><br>
+                <p>{{profile.streetaddress}}</p>
+                
             </div>
             <div class="row">
-                <label for="inputEmail" class="col-form-label">City</label><br>
-                <b>{{profile.city}}</b>
+                <label for="inputEmail" class="col-form-label"><b>City</b></label><br>
+                <p>{{profile.city}}</p>
+                
             </div>
             <div class="row">
-                <label for="inputEmail" class="col-form-label">State</label><br>
-                <b>{{profile.state}}</b>
+                <label for="inputEmail" class="col-form-label"><b>State</b></label><br>
+                <p>{{profile.state}}</p>
             </div>
             <div class="row">
-                <label for="inputEmail" class="col-form-label">Zip Code</label><br>
-                <b>{{profile.zipcode}}</b>
+                <label for="inputEmail" class="col-form-label"><b>Zip Code</b></label><br>
+                <p>{{profile.zipcode}}</p>
             </div>
             <div clas="row">
                 <button data_testid="address-edit-button" type="button" value="Upload" class="btn btn-info btn-block">Edit</button>
