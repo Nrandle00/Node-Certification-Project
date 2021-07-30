@@ -2,37 +2,37 @@
   <br><br>
   <h1>Cart</h1>
   <br>
-  <table class="table"> 
+  <table class="table">
     <thead>
-      
+
     </thead>
 
-     
+
     <tbody>
       <br>
-      <tr *ngFor ="let item of tempCart; index as i">
-        <td>{{item.name}} <br> 
+      <tr *ngFor="let item of tempCart; index as i">
+        <td>{{item.name}} <br>
           Discount: {{item.discount}} <br>
-        {{item.price|currency:'EUR':true}}</td>
+          {{item.price|currency:'EUR':true}}</td>
         <button type="button" class="btn btn-danger" (click)="removeItem(i)">Remove Item</button>
         <br>
       </tr>
       <br>
-    
+
     </tbody>
 
   </table>
 
-  
- <br>
+
+  <br>
   <h3 class="text-right e">Grand Total: {{getSum()|currency:'EUR':true}}</h3>
   <br>
   <br>
-  
+
   <br>
   <br>
-  
+
   <button class="btn btn-block btn-success btn-large t" (click)=placeOrder() routerLink="/checkout">Place order</button>
-  
+
 
 </div>

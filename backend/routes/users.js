@@ -56,6 +56,7 @@ Router.post("/register", async (req, res)=>{
                 firstname, 
                 lastname,
                 streetaddress,
+                admin : false,
                 city,
                 state,
                 zipcode
