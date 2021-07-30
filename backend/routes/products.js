@@ -51,7 +51,21 @@ Router.get('/homepage/departments', async (req, res) => {
         })
     }
 });
-
+Router.get('/department/:dep', async (req, res) => {
+    try{
+         const docs = await ProductModel.find({department : req.params.dep})
+         
+	    res.json(docs);
+    }
+    catch(error){
+        console.log(error)
+        res.status(500).json({
+            status: "error",
+            message: "Error finding products"
+            
+        })
+    }
+});
 
 //get all products
 Router.get('/', async (req, res) => {

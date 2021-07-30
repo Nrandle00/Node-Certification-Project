@@ -4,11 +4,14 @@ import { LoginformComponent } from './forms/loginform/loginform.component';
 import { HomepageComponent } from './pages/homepage/homepage.component';
 import { RegistrationformComponent } from './forms/registrationform/registrationform.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { DepartmentComponent } from './components/products/department/department.component';
 
 const routes: Routes = [
   { path : "", component : HomepageComponent},
   { path : "login", component : LoginformComponent},
-  { path : "register", component : RegistrationformComponent}
+  { path : "register", component : RegistrationformComponent},
+  { path: "department/:department", component: DepartmentComponent },
+  { path: "department/:department/:filterBy", component: DepartmentComponent }
 ];
 
 @NgModule({

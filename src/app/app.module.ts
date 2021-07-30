@@ -15,6 +15,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { CarouselComponent } from './components/homepage/carousel/carousel.component';
 import { ProductsComponent } from './components/homepage/products/products.component';
 import { DepartmentsComponent } from './components/homepage/departments/departments.component';
+import { DepartmentComponent } from './components/products/department/department.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DepartmentsComponent } from './components/homepage/departments/departme
     MenuComponent,
     CarouselComponent,
     ProductsComponent,
-    DepartmentsComponent
+    DepartmentsComponent,
+    DepartmentComponent
   ],
   imports: [
     BrowserModule,

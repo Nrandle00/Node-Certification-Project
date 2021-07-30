@@ -1,0 +1,30 @@
+<div class="container pt-3">
+    <div class="row">
+        <div class="col-2">
+            <p>Select a price range</p>
+            <select [(ngModel)]="selectedOption" class="form-select" aria-label="Select Price Range">
+                <option value="any" (click)="select(selectedOption)">Any</option>
+                <option value="1-50" (click)="select(selectedOption)">1-50</option>
+                <option value="51-100" (click)="select(selectedOption)">51-100</option>
+                <option value="101-1000" (click)="select(selectedOption)">101-1000</option>
+                <option value="1001-5000" (click)="select(selectedOption)">1001-5000</option>
+                <option value="5000-10000" (click)="select(selectedOption)">5000-10,000</option>
+            </select>
+        </div>
+        <div class="col">
+            <h2>Products</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <div class="col-3 mb-4" *ngFor="let product of products;">
+                    <div class="card-sl">
+                        <img class="card-image" src={{product.image}} alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-heading">{{product.name | titlecase}} </h5>
+                            <p class="card-text">{{product.price | currency :'EUR'}} </p>
+                        </div>
+                        <a class="card-button">add to cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
