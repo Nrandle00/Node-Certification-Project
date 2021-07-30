@@ -9,6 +9,8 @@ import { CartPageComponent } from './pages/cart-page/cart-page.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AddNewProductComponent } from './pages/add-new-product/add-new-product.component';
 import { AdminGuard } from './guards/admin.guard';
+import { ProfileComponent } from './pages/profile/profile.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path : "", component : HomepageComponent},
@@ -18,7 +20,8 @@ const routes: Routes = [
   { path : "department/:department", component: DepartmentComponent },
   { path : "department/:department/:filterBy", component: DepartmentComponent },
   { path : "products/:id", component: ProductPageComponent},
-  { path : "cart", component: CartPageComponent}
+  { path : "cart", component: CartPageComponent},
+  { path : "profile", component : ProfileComponent,  canActivate : [AuthGuard]}
 ];
 
 @NgModule({

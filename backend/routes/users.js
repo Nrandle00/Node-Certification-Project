@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken")
 
 const SECRET_KEY = "dscwrcfdvjl4387398msl%$#^%cewncjno(&*^MNjjnjWWELK)098979d4@#"
 
-// /user/login
+// api/v1/users/login
 Router.post("/login", async (req, res)=>{
     try{
         const { body } = req
@@ -19,7 +19,7 @@ Router.post("/login", async (req, res)=>{
         if(verify){
             const payload = {id : user._id, admin : user.admin || false}
             const token = jwt.sign(payload, SECRET_KEY, { expiresIn : 3600 })
-            res.json({ status : "success", message : "user logged in successfully", accessToken : token })
+            res.json({ status : "success", message : "user logged in successfully", accessToken : token, id: user._id})
             return false;
         }
         res.status(401).json({ status : "error", message : "username and password combination is incorrect" })
@@ -29,7 +29,7 @@ Router.post("/login", async (req, res)=>{
     }
 });
 
-// /user/whoami
+// api/v1/users/whoami
 Router.get("/whoami", AuthMiddleware, async (req, res)=>{
     try{
         const payload = req.user;
@@ -45,7 +45,7 @@ Router.get("/whoami", AuthMiddleware, async (req, res)=>{
 Router.post("/register", async (req, res)=>{
     try{
         const { body } = req
-        const { email, password, firstname, lastname } = body;
+        const { email, password, firstname, lastname, streetaddress, city, state, zipcode } = body;
         // console.log(email, password, firstname, lastname);
         if(email && password && firstname && lastname){
             
@@ -54,7 +54,11 @@ Router.post("/register", async (req, res)=>{
                 email,
                 password : encryptedPassword, 
                 firstname, 
-                lastname
+                lastname,
+                streetaddress,
+                city,
+                state,
+                zipcode
             });
             await user.save();
             res.json({ status : "success", message : "user created successfully" })

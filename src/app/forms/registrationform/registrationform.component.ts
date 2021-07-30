@@ -12,6 +12,10 @@ export class RegistrationformComponent implements OnInit {
     firstname: "",
     lastname: "",
     email: "",
+    streetaddress: "",
+    city: "",
+    state: "",
+    zipcode: "",
     password: "",
     confirmpassword: ""
   }

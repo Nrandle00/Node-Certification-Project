@@ -1,0 +1,61 @@
+<!-- {{profile | json}} -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="row">
+                <img data_testid="profile-image" src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <button data_testid="profile-delete-button" type="button" value="Delete Image" class="btn btn-warning btn-block">Delete Image</button>
+                </div>
+                <div class="col-md-2 offset-md-3">
+                    <button data_testid="profile-upload-button" type="button" value="Upload" class="btn btn-info btn-block">Upload</button>
+                </div>
+            </div>
+        </div>
+        <div class="col offset-md-1">
+            <div class="row">
+                <h4>User Info</h4>
+            </div>
+            <div class="row">
+                <label data_testid="profile-first-name" for="inputFirstName" class="col-form-label">Firstname</label><br>
+                <b>{{profile.firstname}}</b>
+            </div>
+            <div class="row">
+                <label data_testid="profile-last-name" for="inputLastName" class="col-form-label">Lastname</label><br>
+                <b>{{profile.lastname}}</b>
+            </div>
+            <div class="row>">
+                <label data_testid="profile-email-name" for="inputEmail" class="col-form-label">Email</label><br>
+                <b>{{profile.email}}</b>
+            </div>
+        </div>
+        <div class="col">
+            <div class="row">
+                <h4>Address</h4>
+            </div>
+            <div class="row">
+                <label for="inputEmail" class="col-form-label">Street Address</label><br>
+                <b>{{profile.streetaddress}}</b>
+            </div>
+            <div class="row">
+                <label for="inputEmail" class="col-form-label">City</label><br>
+                <b>{{profile.city}}</b>
+            </div>
+            <div class="row">
+                <label for="inputEmail" class="col-form-label">State</label><br>
+                <b>{{profile.state}}</b>
+            </div>
+            <div class="row">
+                <label for="inputEmail" class="col-form-label">Zip Code</label><br>
+                <b>{{profile.zipcode}}</b>
+            </div>
+            <div clas="row">
+                <button data_testid="address-edit-button" type="button" value="Upload" class="btn btn-info btn-block">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+        

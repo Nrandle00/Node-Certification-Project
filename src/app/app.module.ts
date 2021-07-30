@@ -21,6 +21,7 @@ import { ManageOrdersComponent } from './pages/manage-orders/manage-orders.compo
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { AddNewProductComponent } from './pages/add-new-product/add-new-product.component';
 import { CartService } from './services/cart.service';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CartService } from './services/cart.service';
     CartPageComponent,
     ManageOrdersComponent,
     ProductPageComponent,
-    AddNewProductComponent
+    AddNewProductComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

@@ -1,63 +1,109 @@
 <div class="container-fluid">
-<div class="container">
-    <div class="row centered-form">
-        <div class="col-md-6">
-            <h3>Welcome to Shop 24x7</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Proin vulputate et eros non eleifend. 
-                Etiam ut aliquet justo, et cursus diam. 
-                Etiam mattis finibus felis ac varius. 
-                In ac vehicula urna, a suscipit est. 
-                Integer eget elit luctus, cursus orci et, bibendum nunc.
-                Praesent volutpat pulvinar volutpat.
-                Vestibulum in risus consectetur, fermentum leo non, convallis erat. 
-                Aenean eget dolor condimentum, dictum est at, ornare ante. 
-                Curabitur dignissim est at felis porttitor, sed luctus nunc pharetra. 
-                Sed vel ante ornare, ullamcorper dui ac, maximus libero. 
-                Phasellus augue velit, pellentesque id ornare nec, feugiat quis ante. 
-                Sed ex ex, vulputate id pretium at, maximus non elit. 
-                Phasellus vehicula ultrices purus et suscipit. 
-                Suspendisse egestas dui ut ligula suscipit faucibus.</p>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Register</h3>
-                </div>
-                <div class="panel-body">
-                    <form role="form" #registrationForm="ngForm" (ngSubmit)="register(registrationForm)">
-                        <div class="form-group">
-                            <div class="form-group col-lg-6">
-                                <label for="inputFirstName" class="col-form-label">Firstname</label>
-                                <input type='text' name="firstname" class="form-control" id="inputFirstName" #name="ngModel" [(ngModel)]="registrationModel.firstname"/>
-                            </div>
-                            <div class="form-group col-lg-6">
-                                <label for="inputLastName" class="col-form-label">Lastname</label>
-                                <input type='text' name="lastname" class="form-control" id="inputLastName" #name="ngModel" [(ngModel)]="registrationModel.lastname"/>
-                            </div>
-                        </div>
-
-                        <div class="form-group col-lg-12">
-                                <label for="inputEmail" class="col-form-label">Email</label>
-                                <input type='text' name="email" class="form-control" id="inputEmail" #email="ngModel" [(ngModel)]="registrationModel.email"/>
-                        </div>
-                        
-                        <div class="form-group col-lg-12">
-                                <label for="inputPassword" class="col-form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="inputPassword" #password="ngModel" [(ngModel)]="registrationModel.password"/>
-                        </div>
-
-                        <div class="form-group col-lg-12">
-                                <label for="inputConfirmPassword" class="col-form-label">Confirm Password</label>
-                                <input type="password" name="confirnpassword" class="form-control" id="inputConfirmPassword" #confirmpassword="ngModel" [(ngModel)]="registrationModel.confirmpassword"/>
-                        </div>
-                        
-                        <div class="form-group col-lg-6">
-                                <input type="submit" class="form-control" value="Register" class="btn btn-info btn-block">
-                        </div>  
-                    </form>
+    <div class="container">
+        <div class="row centered-form">
+            <div class="col-md-6">
+                <h3>Welcome to Shop 24x7</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Proin vulputate et eros non eleifend. 
+                    Etiam ut aliquet justo, et cursus diam. 
+                    Etiam mattis finibus felis ac varius. 
+                    In ac vehicula urna, a suscipit est. 
+                    Integer eget elit luctus, cursus orci et, bibendum nunc.
+                    Praesent volutpat pulvinar volutpat.
+                    Vestibulum in risus consectetur, fermentum leo non, convallis erat. 
+                    Aenean eget dolor condimentum, dictum est at, ornare ante. 
+                    Curabitur dignissim est at felis porttitor, sed luctus nunc pharetra. 
+                    Sed vel ante ornare, ullamcorper dui ac, maximus libero. 
+                    Phasellus augue velit, pellentesque id ornare nec, feugiat quis ante. 
+                    Sed ex ex, vulputate id pretium at, maximus non elit. 
+                    Phasellus vehicula ultrices purus et suscipit. 
+                    Suspendisse egestas dui ut ligula suscipit faucibus.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Register</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" #registrationForm="ngForm" (ngSubmit)="register(registrationForm)" edurekaCompareValidator>
+                            <div class="col">
+    
+                                <div class="row justify-content-between">
+                                    <div class="col align-self-start">
+                                        <label for="inputFirstName" class="col-form-label">Firstname</label>
+                                        <input data_testid="register-first-name" type='text' name="firstname" class="form-control" id="inputFirstName" #firstname="ngModel" [(ngModel)]="registrationModel.firstname" required/>
+                                        <div *ngIf="firstname.errors" class="form-error">
+                                            <p *ngIf="firstname.errors.required">Firstname is required</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col align-self-end">
+                                        <label for="inputLastName" class="col-form-label">Lastname</label>
+                                        <input data_testid="register-last-name" type='text' name="lastname" class="form-control" id="inputLastName" #lastname="ngModel" [(ngModel)]="registrationModel.lastname" required/>
+                                        <div *ngIf="lastname.errors" class="form-error">
+                                            <p *ngIf="lastname.errors.required">Lastname is required</p>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+    
+                                <div class="form-group col-lg-12">
+                                    <label for="inputEmail" class="col-form-label">Email</label>
+                                    <input data_testid="register-email-name" type='text' name="email" class="form-control" id="inputEmail" #email="ngModel" [(ngModel)]="registrationModel.email" required email/>
+                                </div>
+                                <div *ngIf="email.errors" class="form-error">
+                                    <p *ngIf="email.errors.required">Email is required</p>
+                                    <p *ngIf="email.errors.email">Please provide correct email</p>
+                                </div>
+                                <div class="row justify-content-between">
+                                    <div class="col align-self-start">
+                                        <label for="inputPassword" class="col-form-label">Password</label>
+                                        <input data_testid="register-password"type="password" name="password" class="form-control" id="inputPassword" #password="ngModel" [(ngModel)]="registrationModel.password" required minlength="8"/>
+                                        <div *ngIf="password.errors" class="form-error">
+                                            <p *ngIf="password.errors.required">Password is required</p>
+                                            <p *ngIf="password.errors.minlength">Please provide atleast 8 chars for password</p>
+                                        </div>
+                                    </div>
+                                    <div class="col align-self-end">
+                                        <label for="inputConfirmPassword" class="col-form-label">Confirm Password</label>
+                                        <input data_testid="register-confirm-password" type="password" name="confirmpassword" class="form-control" id="inputConfirmPassword" #confirmpassword="ngModel" [(ngModel)]="registrationModel.confirmpassword" required minlength="8"/>
+                                        <div *ngIf="confirmpassword.errors" class="form-error">
+                                            <p *ngIf="confirmpassword.errors.required">Confirm Password is required</p>
+                                            <p *ngIf="confirmpassword.errors.minlength">Please provide atleast 8 chars for password</p>
+                                            <!-- <p *ngIf="confirmpassword.errors.EdurekaCompare">Confirm Password is required</p> -->
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="row justify-content-between">
+                                    <div class="col align-self-start">
+                                        <label for="inputStreetAddress" class="col-form-label">Street Address</label>
+                                    <input type="text" name="streetaddress" class="form-control" id="inputStreetAddress" #streetaddress="ngModel" [(ngModel)]="registrationModel.streetaddress"/>
+                                    </div>
+                                    <div class="col align-self-end">
+                                        <label for="inputCity" class="col-form-label">City</label>
+                                    <input type='text' name="city" class="form-control" id="inputCity" #city="ngModel" [(ngModel)]="registrationModel.city"/>
+                                    </div>
+                                </div>
+    
+                                <div class="row justify-content-between">
+                                    <div class="col align-self-start">
+                                        <label for="inputState" class="col-form-label">State</label>
+                                        <input type="text" name="state" class="form-control" id="inputState" #state="ngModel" [(ngModel)]="registrationModel.state"/>
+                                    </div>
+                                    <div class="col align-self-end">
+                                        <label for="inputZipCode" class="col-form-label">Zip Code</label>
+                                        <input type='text' name="zipcode" class="form-control" id="inputZipCode" #zipcode="ngModel" [(ngModel)]="registrationModel.zipcode"/>
+                                    </div>
+                                </div>
+    
+                                <div class="form-group col-lg-6">
+                                    <input data_testid="register-submit" type="submit" class="form-control" value="Register" class="btn btn-info btn-block">
+                                </div>  
+                            </div>  
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
