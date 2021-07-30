@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Add New Product</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+        </div>
+        <div class="col-9">
+            <form [formGroup]="addNewProduct" (ngSubmit)="addNewProductSubmit()">
+                <div class="mb-3">
+                    <label class="form-label">Product Name</label>
+                    <input formControlName="name" type="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Department</label>
+                    <input formControlName="department" type="text  " class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Price</label>
+                    <input formControlName="price" type="number" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Discount</label>
+                    <input formControlName="discount" type="number" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Product Image</label>
+                    <input (change)="selectImage($event)" formControlName="image" type="file" class="form-control"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Description</label>
+                    <textarea formControlName="description"  class="form-control"  rows="3"></textarea>
+                </div>
+                
+
+                <div class="mb-3">
+                    <button class="btn btn-primary" data-testid="add-new-button">Add New Product</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

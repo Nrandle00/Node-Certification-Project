@@ -16,22 +16,22 @@ export class ProductsComponent implements OnInit {
 
 
   departments !: string[];
-  
 
-  constructor(private homeDeps : HomeCategoriesService) { }
+
+  constructor(private homeDeps: HomeCategoriesService) { }
 
   ngOnInit(): void {
-    
-    this.homeDeps.getHomepageProducts().subscribe((response:Iproduct[] ) => {
+
+    this.homeDeps.getHomepageProducts().subscribe((response: Iproduct[]) => {
       this.products = response;
       this.products.forEach(product => {
         product.image = "http://localhost:3000" + product.image
       });
     })
-    
-    this.homeDeps.getHomePageDepartments().subscribe((response:string[] ) => {
+
+    this.homeDeps.getHomePageDepartments().subscribe((response: string[]) => {
       this.departments = response;
-    })    
+    })
   }
 
 }

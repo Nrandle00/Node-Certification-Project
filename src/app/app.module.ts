@@ -16,6 +16,10 @@ import { CarouselComponent } from './components/homepage/carousel/carousel.compo
 import { ProductsComponent } from './components/homepage/products/products.component';
 import { DepartmentsComponent } from './components/homepage/departments/departments.component';
 import { DepartmentComponent } from './components/products/department/department.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { ManageOrdersComponent } from './pages/manage-orders/manage-orders.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { AddNewProductComponent } from './pages/add-new-product/add-new-product.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,11 @@ import { DepartmentComponent } from './components/products/department/department
     CarouselComponent,
     ProductsComponent,
     DepartmentsComponent,
-    DepartmentComponent
+    DepartmentComponent,
+    CartPageComponent,
+    ManageOrdersComponent,
+    ProductPageComponent,
+    AddNewProductComponent
   ],
   imports: [
     BrowserModule,

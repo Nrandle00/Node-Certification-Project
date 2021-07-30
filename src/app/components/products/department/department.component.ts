@@ -36,7 +36,7 @@ export class DepartmentComponent implements OnInit {
       }
     }
 
-    this.homeDeps.getDepartments(this.department).subscribe((response: Iproduct[]) => {
+    this.homeDeps.getDepartment(this.department).subscribe((response: Iproduct[]) => {
       this.products = response;
       this.products.forEach(product => {
         product.image = "http://localhost:3000" + product.image

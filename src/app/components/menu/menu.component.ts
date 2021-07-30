@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HomeCategoriesService } from 'src/app/services/home-categories.service';
 
 @Component({
   selector: 'edureka-menu',
@@ -7,18 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   selectedOption : string = "Departments";
-  options = [{ id: 1, title: 'title 1' }, { id: 2, title: 'title 2' }];
-  constructor() { }
+  departments !: string[];
+  constructor(private homeService : HomeCategoriesService,private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.selectedOption = "123"
+    this.homeService.getHomePageDepartments().subscribe((response: string[]) => {
+      this.departments = response;
+    })
   }
-  ngAfterContentInit():void{
-    this.selectedOption = "123"
-  }
+  
 
   select(s :string){
-    console.log(this.selectedOption)
+    this.router.navigateByUrl("department/" + this.selectedOption).then(() => {window.location.reload()});
 
   }
 }

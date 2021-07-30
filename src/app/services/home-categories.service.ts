@@ -17,8 +17,7 @@ export class HomeCategoriesService {
   getHomepageProducts() : Observable<Iproduct[]>{
     return this.http.get<Iproduct[]>("http://localhost:3000/api/v1/products/homepage/products")
   }
-  getDepartments(department : string) : Observable<Iproduct[]>{
-    console.log(department)
+  getDepartment(department : string) : Observable<Iproduct[]>{
     return this.http.get<Iproduct[]>("http://localhost:3000/api/v1/products/department/".concat(department))
   }
   getHomepageBanner() : Observable<Iproduct[]> {

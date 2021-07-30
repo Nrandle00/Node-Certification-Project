@@ -8,7 +8,10 @@ import { Router } from '@angular/router';
 export class UserService {
 
   isLoggeedIn= false;
-
+  user = {
+    name : "abc",
+    isAdmin : true
+}
   constructor(private http: HttpClient, private router: Router) { }
 
   login(userinfo : any){
